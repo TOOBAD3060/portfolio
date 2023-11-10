@@ -2,6 +2,8 @@ import React from 'react'
 import WorkImg from '../assets/projects/workImg.jpeg'
 import realEstate from '../assets/projects/realestate.jpg'
 import mzienet from '../assets/projects/mzienet_systems.png'
+import quizApp from '../assets/projects/quiz.png'
+import nikeApp from '../assets/projects/nike_app.png'
 
 const Work = () => {
   return (
@@ -42,7 +44,7 @@ HTML + CSS + JS Application
                 </div>
                          {/* Grid Item */}
 
-                <div style={{backgroundImage:`url(${WorkImg})`}}
+                <div style={{backgroundImage:`url(${quizApp})`}}
                 className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div '>
                     
                     {/* Hover effects */}
@@ -69,7 +71,7 @@ React JS + CSS Application
                          {/* Grid Item */}
 
 
-                <div style={{backgroundImage:`url(${realEstate})`}}
+                <div style={{backgroundImage:`url(${nikeApp})`}}
                 className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div '>
                     
                     {/* Hover effects */}
