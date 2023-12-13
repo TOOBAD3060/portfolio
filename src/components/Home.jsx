@@ -15,7 +15,7 @@ const Home = () => {
         if (theStart <= theText.length - 1) {
             theStart++;
             setMyText(theText.slice(0, theStart))
-            setTimeout(textHandler, 150)
+            setTimeout(textHandler, 100)
         }
         
     }
