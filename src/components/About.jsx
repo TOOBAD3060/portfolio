@@ -1,6 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import {motion} from 'framer-motion'
+
+
+const text = {
+  slideDown: { 
+      opacity: 0,
+      y:150,
+      scale:0,
+      },
+  slideUp: { 
+      opacity: 1, 
+      y:0,
+      scale:1,
+      transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration:5,
+      }
+      },
+}
 
 const About = () => {
+
+    
+    
+                               
+
   return (
     <div name='about' className='w-full h-screen bg-[#0a192f] text-gray-300 ' >
         <div className='flex flex-col justify-center items-center w-full h-full '>
@@ -12,7 +37,8 @@ const About = () => {
              </div>  
              <div className='max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4 '>
                     <div className='sm:text-right text-4xl font-bold '>
-                        <p>Hi. I'm Babs, nice to meet you. Please take a look around </p>
+                        <motion.p variants={text} initial="slideDown" whileInView="slideUp" viewport={{once:true, amount:0}}
+                        > Hi. I'm Babs, nice to meet you. Please take a look around. </motion.p>
                     </div>
                     <div>
                         <p>

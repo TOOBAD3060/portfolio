@@ -1,14 +1,35 @@
 import React from 'react'
-import WorkImg from '../assets/projects/workImg.jpeg'
-import realEstate from '../assets/projects/realestate.jpg'
 import mzienet from '../assets/projects/mzienet_systems.png'
 import quizApp from '../assets/projects/quiz.png'
 import nikeApp from '../assets/projects/nike_app.png'
+import {motion} from 'framer-motion'
+
+
+const item = {
+    slideOutRight: { 
+      opacity: 0, 
+      x: -200,
+      scale: 0
+     },
+    slideInLeft: { 
+      opacity: 1, 
+      x: 0,
+      scale: 1,
+      transition: {
+        type: "spring",
+        bounce: 0.4,
+        duration:5,
+      }
+     },
+    show: { opacity: 1 }
+  }
+  
 
 const Work = () => {
   return (
-    <div name='work' className='w-full md:h-screen text-gray-300 bg-[#0a192f] '>
-        <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full '>
+    <div  name='work' className='w-full md:h-screen text-gray-300 bg-[#0a192f] '>
+        <motion.div variants={item} initial="slideOutRight" whileInView="slideInLeft" viewport={{once:true, amount:0}}
+        className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full '>
              <div className='pb-8'>
                 <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600'>Work</p>
                 <p className='py-6'> Check out some of my recent work</p>
@@ -167,7 +188,7 @@ React JS Application
                 </div> */}
              </div>
              
-        </div>
+        </motion.div>
     </div>
   )
 }
